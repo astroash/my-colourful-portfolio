@@ -24,15 +24,38 @@ main {
   color: rgb(169, 245, 225);
 }
 
+.nav__icon {
+  height: 100%;
+}
+
 .nav__title {
   font-family: Pacifico;
   display: inline-block;
+  font-weight: 100;
+  margin: 0 1rem;
 }
 
 .nav__subtitle {
   display: inline-block;
   font-family: 'Gamja Flower';
 }
+
+@media only screen and (max-width: 400px) {
+  .nav__title {
+    font-size: 1.3rem;
+  }
+
+  .nav__subtitle {
+      font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .nav__subtitle {
+      display: none;
+  }
+}
+
 
 .tile {
   height: 50%;
@@ -55,7 +78,18 @@ main {
 .tile__link {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.tile__subtitle {
+  margin-top: 1rem; 
+  transition: all 1s ease;
+  font-family: 'Gamja Flower';
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
 }
 
 .tile__gh_logo, .tile__li_logo {
@@ -65,17 +99,22 @@ main {
   fill: white;
 }
 
+@media only screen and (min-width: 800px) {
+  .tile__gh_logo, .tile__li_logo {
+    width: 60%;
+  }
+}
+
+.tile:hover .tile__subtitle,
 .tile:hover .tile__gh_logo,
 .tile:hover .tile__li_logo {
   opacity: 1;
 }
 
 .tile__gh_logo:hover{
-  opacity: 1;
   fill: rgb(216, 176, 252);
 }
 
 .tile__li_logo:hover{
-  opacity: 1;
   fill: rgb(210, 250, 194);
 }
