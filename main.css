@@ -38,9 +38,11 @@ main {
 .nav__subtitle {
   display: inline-block;
   font-family: 'Gamja Flower';
+  font-size: 1.3rem;
+
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .nav__title {
     font-size: 1.3rem;
   }
@@ -50,18 +52,11 @@ main {
   }
 }
 
-@media only screen and (max-width: 355px) {
-  .nav__subtitle {
-      display: none;
-  }
-}
-
-
 .tile {
   height: 50%;
   width: 20%;
   background:  rgb(0, 2, 27);
-  transition: height 1s ease;
+  transition: height 2s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,6 +85,16 @@ main {
   font-size: 1.5rem;
   color: white;
   opacity: 0;
+}
+
+@media only screen and (max-width: 365px) {
+  .nav__subtitle {
+      display: none;
+  }
+
+  .tile__subtitle {
+    font-size: 1.3rem;
+  }
 }
 
 .tile__gh_logo, .tile__li_logo {
