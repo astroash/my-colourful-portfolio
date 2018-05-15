@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: GamjaFlower;
-  src: url(./assets/fonts/GamjaFlower-Regular.ttf);
+  src: url(./assets/fonts/GamjaFlower-Regular-lite.ttf);
 }
 
 * {
@@ -41,13 +41,13 @@ main {
 }
 
 .nav__title {
-  font-family: Pacifico;
+  font-family: Pacifico, cursive;
   font-weight: 100;
   margin: 0 1rem;
 }
 
 .nav__subtitle {
-  font-family: GamjaFlower;
+  font-family: GamjaFlower, cursive;
   font-size: 1.3rem;
   line-height: 1.3rem;
 }
