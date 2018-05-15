@@ -21,7 +21,7 @@ main {
   margin: 0 auto;
   width: 100%;
   height: 90%;
-  background: #C9FD88;
+  background: rgb(135, 254, 193);
   display: flex;
   justify-content: space-around;
   align-items: center;

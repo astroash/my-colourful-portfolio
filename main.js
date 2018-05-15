@@ -1,11 +1,19 @@
 window.onload = init;
 var main = document.querySelector('main')
+var navTitle = document.querySelector('.nav__title')
+var navSubtitle = document.querySelector('.nav__subtitle')
 
 function init() {
-	document.onmousemove = getCursorXY;
+	document.onmousemove = getCursorX;
 }
 
-var getCursorXY = function (e) {
+function makeItColourful(colourOne, colourTwo) {
+  main.style.background = colourOne
+  navTitle.style.color = colourTwo
+  navSubtitle.style.color = colourTwo
+}
+
+var getCursorX = function (e) {
   var x = e.clientX 
   var w = document.documentElement.clientWidth
   var percentage = x/w*100
@@ -16,20 +24,24 @@ var getCursorXY = function (e) {
 
   switch(segment) {
     case 0:
-      var colour = `rgb(${255-inc}, 255, 130)`
-      main.style.background = colour
+      var colourMain = `rgb(${255-inc}, 255, 130)`
+      var colourInverse = `rgb(${255-inc}, 130, 255)`
+      makeItColourful(colourMain, colourInverse)
       break;
     case 1:
-      var colour = `rgb(130, 255, ${130+inc})`
-      main.style.background = colour
+      var colourMain = `rgb(130, 255, ${130+inc})`
+      var colourInverse = `rgb(130, ${130+inc}, 255)`
+      makeItColourful(colourMain, colourInverse)
       break;
     case 2:
-      var colour = `rgb(130, ${255-inc}, 255)`
-      main.style.background = colour
+      var colourMain = `rgb(130, ${255-inc}, 255)`
+      var colourInverse = `rgb(130, 255, ${255-inc})`
+      makeItColourful(colourMain, colourInverse)
       break;
     case 3:
-      var colour = `rgb(${130+inc}, 130, 255)`
-      main.style.background = colour
+      var colourMain = `rgb(${130+inc}, 130, 255)`
+      var colourInverse = `rgb(${130+inc}, 255, 130)`
+      makeItColourful(colourMain, colourInverse)
       break;
     default:
       console.error('OOPS');
