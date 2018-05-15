@@ -129,3 +129,29 @@ main {
 .tile__li_logo:hover{
   fill: rgb(210, 250, 194);
 }
+
+@keyframes sky {
+  0% {
+    transform: rotate(25deg) translate(0,0);
+  }
+
+  50% {
+    transform: rotate(25deg) translate(70vw, 0) scale(1.5, 1.5);
+  }
+  
+  100% {
+    transform: rotate(25deg) translate(130vw, 0) scale(2, 2);
+  }
+}
+  
+  .egg__comet {
+    position: fixed;
+    transform: rotate(20deg);
+    height: 10rem;
+    left: -10rem;
+    top: 0rem;
+  }
+  
+  .egg__comet--animate {
+    animation: sky 1.5s linear
+  }

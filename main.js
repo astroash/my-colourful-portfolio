@@ -25,25 +25,32 @@ var getCursorX = function (e) {
   switch(segment) {
     case 0:
       var colourMain = `rgb(${255-inc}, 255, 130)`
-      var colourInverse = `rgb(${255-inc}, 130, 255)`
-      makeItColourful(colourMain, colourInverse)
+      var colourPlusOne = `rgb(130, 255, ${130+inc})`
+      makeItColourful(colourMain, colourPlusOne)
       break;
     case 1:
       var colourMain = `rgb(130, 255, ${130+inc})`
-      var colourInverse = `rgb(130, ${130+inc}, 255)`
-      makeItColourful(colourMain, colourInverse)
+      var colourPlusOne = `rgb(130, ${255-inc}, 255)`
+      makeItColourful(colourMain, colourPlusOne)
       break;
     case 2:
       var colourMain = `rgb(130, ${255-inc}, 255)`
-      var colourInverse = `rgb(130, 255, ${255-inc})`
-      makeItColourful(colourMain, colourInverse)
+      var colourPlusOne = `rgb(${130+inc}, 130, 255)`
+      makeItColourful(colourMain, colourPlusOne)
       break;
     case 3:
       var colourMain = `rgb(${130+inc}, 130, 255)`
-      var colourInverse = `rgb(${130+inc}, 255, 130)`
-      makeItColourful(colourMain, colourInverse)
+      var colourPlusOne =`rgb(255, 130, ${255-inc}`
+      makeItColourful(colourMain, colourPlusOne)
       break;
     default:
       console.error('OOPS');
   }
 }
+
+var flyer = document.querySelector('.egg__comet')
+var eggOne = document.querySelector('.nav__icon').addEventListener('click', function(){
+  console.log('inside');
+  
+  flyer.classList.toggle("egg__comet--animate")
+})
