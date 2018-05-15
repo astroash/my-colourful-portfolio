@@ -1,14 +1,16 @@
 window.onload = init;
-var main = document.querySelector('main')
+var body = document.querySelector('body')
 var navTitle = document.querySelector('.nav__title')
 var navSubtitle = document.querySelector('.nav__subtitle')
 
 function init() {
-	document.onmousemove = getCursorX;
+  document.onmousemove = getCursorX;
+  //pseudo classes for IOS
+  document.addEventListener("touchstart", function() {},false); 
 }
 
 function makeItColourful(colourOne, colourTwo) {
-  main.style.background = colourOne
+  body.style.background = colourOne
   navTitle.style.color = colourTwo
   navSubtitle.style.color = colourTwo
 }
