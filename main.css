@@ -24,8 +24,15 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 
+
+/* hyperlink reset */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 body {
-  background: rgb(135, 254, 193);
+  background: #ffff82;
   font-family: GamjaFlower, cursive;
 }
 
