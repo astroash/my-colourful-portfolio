@@ -1,7 +1,7 @@
 window.onload = init;
 var body = document.querySelector('body')
-var navTitle = document.querySelector('.nav__title')
-var navSubtitle = document.querySelector('.nav__subtitle')
+var navTitle = document.querySelector('.nav__header_title')
+var navSubtitle = document.querySelector('.nav__header_subtitle')
 
 function init() {
   document.onmousemove = getCursorX;
@@ -51,8 +51,6 @@ var getCursorX = function (e) {
 }
 
 var flyer = document.querySelector('.egg__comet')
-var eggOne = document.querySelector('.nav__icon').addEventListener('click', function(){
-  console.log('inside');
-  
+var eggOne = document.querySelector('.nav__header_icon').addEventListener('click', function(){
   flyer.classList.toggle("egg__comet--animate")
 })
