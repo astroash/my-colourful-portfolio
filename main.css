@@ -38,8 +38,7 @@ a {
 
 body {
   background: #ffff82;
-  font-family: 'Molengo', cursive;
-  /* font-family: 'GamjaFlower', cursive; */
+  font-family: 'GamjaFlower', cursive;
 }
 
 main {
@@ -50,6 +49,11 @@ main {
 
 ul {
   list-style-position: inside;
+}
+
+.page ul {
+  font-family: 'Molengo', cursive;
+  font-size: 0.9em;
 }
 
 .page {
@@ -170,7 +174,7 @@ ul {
   font-size: 1.2em;
 }
 
-.projects__article_heading, .projects__article_subheading {
+.projects__article_headings {
   margin-bottom: 0.5em;
 }
 
@@ -229,8 +233,8 @@ ul {
 }
 
 .skills__emoji_container:hover .skills__emoji { 
-  transition: all 1s linear;
-  transform: scale(1.3);
+  transition: all 0.5s linear;
+  transform: scale(1.2);
   color: navy;
 }
 
@@ -252,6 +256,45 @@ ul {
    margin-bottom: 2em;
  }
 
+ .experience__article_ul_header {
+  margin-top: 0.5em;
+ }
+
+/* 
+ * Styling for hobbies Page
+ */
+
+ .hobbies__container {
+   height: 80vh;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+ }
+
+ .hobbies__article {
+   display: flex;
+   align-items: center;
+ }
+
+.hobbies__subheading {
+  font-size: 3em;
+}
+
+ .hobbies__text {
+   flex-basis: 0;
+   flex-grow: 2;
+   text-align: center;
+   padding: 0 3em;
+ }
+
+ .hobbies__text li {
+   margin: 0.3em
+ }
+
+ .hobbies__image {
+   flex-basis: 0;
+   flex-grow: 1;
+ }
 /* 
  * Styling for STALKING Page
  */
