@@ -8,6 +8,20 @@ var dirtyMutableState = {
   previousVerticalScroll: 0,
 };
 
+var skillsCopy = {
+  tdd: 'Tests are legit rad. The times when a well maintained test suite ',
+  dbs: 'Indexing is sick. I wish my brain has this functionality',
+  git: 'Not much to say here, git be great.',
+  node: '',
+  js: 'I know peeps give it slack, it tries to do too much, it can\'t deprecate it\'s quirks and is used for purposes it was never intended, but like... that\'s some pretty impressive resiliance',
+  html: 'bread and butter yo',
+  react: 'the devils backbone',
+  functional: 'all the cool kids be like... ain\'t no mutation here',
+  hood: 'fundamental understanding is pretty important to be able to effectively use the new web framework of the week. This site is written vanilla for exactly that reason!',
+  oraganised: 'a left over teaching skill;<br/> organised workflow > organised code > less bugs',
+  prototyping: 'I\'ve perfected the skill of rapid prototypying by taking part in hackathons and working CAST\'s digital fellowship progamme',
+}
+
 function colourInjectors(colourOne, colourTwo) {
   body.style.background = colourOne;
   navTitle.style.color = colourTwo;
@@ -69,6 +83,7 @@ var eggOne = document.querySelector('.nav__header_icon').addEventListener('click
   flyer.classList.toggle("egg__comet--animate");
 });
 
+// adapt emoji text
 
 function init() {
   dirtyMutableState.clientHeight = document.body.clientHeight;
